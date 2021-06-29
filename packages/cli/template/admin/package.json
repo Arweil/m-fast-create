@@ -1,0 +1,29 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "中后台管理系统",
+  "main": "index.js",
+  "scripts": {
+    "dev": "jaraxxus start",
+    "build": "jaraxxus build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^4.16.3",
+    "mobx": "^6.3.2",
+    "mobx-react": "^7.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "@types/react-router-dom": "^5.1.7",
+    "jaraxxus": "^3.1.2",
+    "react-hot-loader": "^4.13.0"
+  }
+}

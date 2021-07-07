@@ -1,14 +1,15 @@
 {
-  "name": "admin",
+  "name": "@m-fast-create/admin-template",
   "version": "1.0.0",
-  "description": "中后台管理系统",
+  "description": "A template for admin",
   "main": "index.js",
   "scripts": {
     "dev": "jaraxxus start",
     "build": "jaraxxus build"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Milk",
+  "license": "MIT",
+  "keywords": ["admin", "react", "mobx", "antd", "typescript"],
   "dependencies": {
     "antd": "^4.16.3",
     "mobx": "^6.3.2",
@@ -20,10 +21,10 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@m-fast-create/jaraxxus": "^1.0.0",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
     "@types/react-router-dom": "^5.1.7",
-    "jaraxxus": "^3.1.2",
     "react-hot-loader": "^4.13.0"
   }
 }

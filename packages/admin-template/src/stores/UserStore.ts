@@ -6,12 +6,11 @@ interface IUserInfo {
 }
 
 interface IMenuInfo extends IBaseMenuInfo {
-
 }
 
 export class UserStore {
   userInfo: IUserInfo | undefined = undefined;
-  menu: IMenuInfo = {} as IMenuInfo;
+  menu: IMenuInfo[] = [] as IMenuInfo[];
 
   constructor() {
     makeAutoObservable(this);
@@ -28,12 +27,19 @@ export class UserStore {
     await Promise.resolve({ code: '0' });
   }
 
+  async getUserInfo() {
+    const res = await Promise.resolve({ code: '0', result: { userName: 'demo user' } });
+    runInAction(() => {
+      this.userInfo = res.result;
+    })
+  }
+
   modifyPwd() {}
 
   async setMenu() {
     const res = await Promise.resolve({
       code: '0',
-      result: {
+      result: [{
         icon: 'SmileOutlined',
         children: [
           {
@@ -55,7 +61,7 @@ export class UserStore {
         ],
         url: '/',
         name: 'demo',
-      }
+      }]
     });
 
     runInAction(() => {

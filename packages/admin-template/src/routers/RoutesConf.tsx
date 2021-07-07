@@ -1,4 +1,6 @@
-// 路由配置组件化
+/**
+ * 子页面中的路由配置
+ */
 
 import React, { Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';

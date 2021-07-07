@@ -2,17 +2,17 @@ import React, { ReactNode, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout, Menu, Dropdown, Avatar } from 'antd';
 import { MenuFoldOutlined, MenuUnfoldOutlined, SettingOutlined, LogoutOutlined, UserOutlined } from '@ant-design/icons';
-import RoutesConf from '@/routers/RoutesConf';
 
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
 
 interface IAppLayoutProps<IMenuInfo extends IBaseMenuInfo> {
-  menu: IMenuInfo;
+  menu: IMenuInfo[];
   userName: string;
   userMenu?: (typeof Menu.Item)[];
   setTitle?: (props: { collapsed: boolean; }) => React.ReactNode;
   onMenuItemClick?: (info: {}) => void;
+  children?: React.ReactNode;
 }
 
 export interface IBaseMenuInfo {
@@ -28,7 +28,7 @@ export default function AppLayout<IMenuInfo extends IBaseMenuInfo>(props: IAppLa
   const [collapsed, setCollapsed] = useState(false);
 
   function bindMenu(menu?: IBaseMenuInfo) {
-    return menu ? (
+    return menu && Object.keys(menu).length > 0 ? (
       <SubMenu
         key={menu.url}
         title={
@@ -83,7 +83,7 @@ export default function AppLayout<IMenuInfo extends IBaseMenuInfo>(props: IAppLa
           theme="dark"
           mode="inline">
           {
-            bindMenu(menu)
+            menu && menu.length > 0 ? menu.map(item => bindMenu(item)) : null
           }
         </Menu>
       </Sider>
@@ -120,7 +120,7 @@ export default function AppLayout<IMenuInfo extends IBaseMenuInfo>(props: IAppLa
         </Header>
         <div style={{ overflowY: 'auto' }}>
           <Content style={{ padding: 12 }}>
-            <RoutesConf />
+            {props.children}
           </Content>
         </div>
       </Layout>

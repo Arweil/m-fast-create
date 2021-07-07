@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-import { Router } from 'react-router-dom';
+import React, { PureComponent, Suspense } from 'react';
+import { Route, Router, Switch } from 'react-router-dom';
 import { History, Location, createBrowserHistory, UnregisterCallback } from 'history';
 import { routerStore } from '@/stores';
 
@@ -41,7 +41,14 @@ export default class Root extends PureComponent {
   render() {
     return (
       <Router history={this.history}>
-        { this.props.children }
+        <Suspense fallback={<div>111</div>}>
+          {/* 页面级别路由 */}
+          <Switch>
+            <Route path="/login" component={React.lazy(() => import('@/login'))} />
+
+            {this.props.children}
+          </Switch>
+        </Suspense>
       </Router>
     );
   }

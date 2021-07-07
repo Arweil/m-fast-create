@@ -1,6 +1,6 @@
 {
-  "name": "jaraxxus",
-  "version": "3.1.3",
+  "name": "@m-fast-create/jaraxxus",
+  "version": "1.0.0",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {

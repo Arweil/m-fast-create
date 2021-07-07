@@ -5,7 +5,7 @@
 * 创建React项目后，在根目录添加*jaraxxus.config.js*配置文件进行webpack的基本配置；（在v4.0.0版本后已经不需要jaraxxus.config.js文件了，会使用默认配置）
 * *jaraxxus start* 命令用作dev环境；
 * *jaraxxus build* 命令用作项目打包。
-* dev环境中需要 node >= 8.10.0
+* dev环境中需要 node >= 10.X
 
 ## API
 jaraxxus.config.js

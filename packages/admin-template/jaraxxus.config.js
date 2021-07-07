@@ -4,7 +4,7 @@ module.exports = {
   entry: 'src/index',
   bundleAnalyzerReport: false,
   devServer: {
-    port: 9999,
+    port: 9876,
     open: false,
   },
   css: {

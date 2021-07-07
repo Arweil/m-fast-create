@@ -1,11 +1,15 @@
 {
-  "name": "mtools",
+  "name": "m-fast-create",
   "version": "1.0.0",
-  "description": "Milk's toolkit",
-  "main": "index.js",
+  "description": "Milk's toolkit for quickly build projects.",
   "scripts": {
     "test": "lerna run test",
     "build": "lerna run build"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
   },
   "keywords": [
     "toolkit"

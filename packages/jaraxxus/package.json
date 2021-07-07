@@ -1,27 +1,31 @@
 {
-  "name": "jaraxxus",
-  "version": "3.1.3",
+  "name": "@m-fast-create/jaraxxus",
+  "version": "1.0.0",
   "bin": {
     "jaraxxus": "./bin/jaraxxus.js"
   },
-  "description": "创建react项目，react-cli",
-  "main": "index.js",
+  "homepage": "",
+  "description": "Create a development environment for react, and the included project build.",
+  "main": "",
   "engines": {
     "node": "10.x"
   },
   "scripts": {
     "start": "node bin/jaraxxus.js start"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:Arweil/Jaraxxus.git"
   },
   "keywords": [
-    "cli",
-    "react"
+    "react",
+    "webpack"
   ],
   "author": "Milk",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.12.10",

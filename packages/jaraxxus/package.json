@@ -4,7 +4,7 @@
   "bin": {
     "jaraxxus": "./bin/jaraxxus.js"
   },
-  "homepage": "",
+  "homepage": "https://github.com/Arweil/m-fast-create/tree/dev/packages/jaraxxus",
   "description": "Create a development environment for react, and the included project build.",
   "main": "",
   "engines": {

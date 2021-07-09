@@ -9,6 +9,7 @@
   },
   "author": "Milk",
   "license": "MIT",
+  "homepage": "https://github.com/Arweil/m-fast-create/tree/dev/packages/admin-template",
   "keywords": ["admin", "react", "mobx", "antd", "typescript"],
   "dependencies": {
     "antd": "^4.16.3",

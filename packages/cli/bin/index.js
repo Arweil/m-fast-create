@@ -3,6 +3,9 @@
 const program = require('commander')
 
 program
+  .version(process.env.npm_package_version)
+
+program
   .command(`create`)
   .action(function (env, options) {
     console.log('create');

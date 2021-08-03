@@ -49,3 +49,6 @@
 |- theme.js // ant-design less 配置
 |- tsconfig.json // tsconfig 配置
 ```
+
+## eslint 规则
+* [eslint-config-airbnb](https://github.com/airbnb/javascript)

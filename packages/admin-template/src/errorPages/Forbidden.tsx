@@ -1,5 +1,5 @@
-import { Result } from 'antd'
-import React from 'react'
+import React from 'react';
+import { Result } from 'antd';
 
 export default function Forbidden() {
   return (

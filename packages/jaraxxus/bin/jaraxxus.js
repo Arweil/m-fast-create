@@ -3,7 +3,8 @@
 const program = require('commander')
 
 program
-  .version('3.1.2')
+  .name('jaraxxus')
+  .version(process.env.npm_package_version)
 
 program
   .command(`init`)
